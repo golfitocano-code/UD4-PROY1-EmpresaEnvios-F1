@@ -12,4 +12,14 @@ public class Dimension {
         this.largo = largo;
     }
 
+    public double getAlto() {
+        return alto;
+    }
 
+    public double getAncho() {
+        return ancho;
+    }
+
+    public double getLargo() {
+        return largo;
+    }
