@@ -86,4 +86,21 @@ public class Envio {
 
         return total;
     }
+    public double calcularPesoFacturable() {
+        double total;
+
+        if (paquete1 != null) {
+            total += paquete1.calcularPesoFacturable();
+        }
+
+        if (paquete2 != null) {
+            total += paquete2.calcularPesoFacturable();
+        }
+
+        if (paquete3 != null) {
+            total += paquete3.calcularPesoFacturable();
+        }
+
+        return Math.ceil(total);
+    }
 }
