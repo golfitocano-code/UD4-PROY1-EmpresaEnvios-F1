@@ -23,3 +23,12 @@ public class Dimension {
     public double getLargo() {
         return largo;
     }
+    public double calcularVolumen() {
+        return alto * ancho * largo;
+    }
+
+
+    public String toString() {
+        return alto + " x " + ancho + " x " + largo + " cm";
+    }
+}
