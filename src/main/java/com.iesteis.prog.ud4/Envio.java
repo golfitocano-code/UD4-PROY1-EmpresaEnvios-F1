@@ -23,4 +23,21 @@ public class Envio {
     public String getCodigoPostal() {
         return codigoPostal;
     }
+    public int getNumeroPaquetes() {
+        int contador;
+
+        if (paquete1 != null) {
+            contador++;
+        }
+
+        if (paquete2 != null) {
+            contador++;
+        }
+
+        if (paquete3 != null) {
+            contador++;
+        }
+
+        return contador;
+    }
 }
