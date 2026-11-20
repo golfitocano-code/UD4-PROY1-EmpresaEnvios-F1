@@ -33,5 +33,10 @@ public class Paquete {
     }
 
     public double calcularPesoFacturable() {
-        return Math.max(peso, calcularPesoVolumetrico());
+        if (peso > calcularPesoVolumetrico()) {
+            return peso;
+        } else {
+            return calcularPesoVolumetrico();
+        }
+    }
     }
