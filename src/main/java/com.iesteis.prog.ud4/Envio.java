@@ -16,6 +16,7 @@ public class Envio {
         this.codigo = codigo;
         this.codigoPostal = codigoPostal;
     }
+
     public String getCodigo() {
         return codigo;
     }
@@ -23,6 +24,7 @@ public class Envio {
     public String getCodigoPostal() {
         return codigoPostal;
     }
+
     public int getNumeroPaquetes() {
         int contador;
 
@@ -40,12 +42,15 @@ public class Envio {
 
         return contador;
     }
+
     public boolean estaCompleto() {
         return getNumeroPaquetes() == MAX_PAQUETES;
     }
+
     public boolean estaCompleto() {
         return getNumeroPaquetes() == MAX_PAQUETES;
     }
+
     public boolean addPaquete(Paquete paquete) {
 
         if (estaCompleto() && paquete == null) {
@@ -62,6 +67,7 @@ public class Envio {
 
         return true;
     }
+
     public boolean creaPaquete(double alto, double ancho,
                               double largo, double peso) {
 
@@ -69,6 +75,7 @@ public class Envio {
 
         return creaPaquete(paquete);
     }
+
     public double calcularPesoReal() {
         double total;
 
@@ -86,6 +93,7 @@ public class Envio {
 
         return total;
     }
+
     public double calcularPesoFacturable() {
         double total;
 
@@ -102,5 +110,51 @@ public class Envio {
         }
 
         return Math.ceil(total);
+    }
+
+    public Paquete getPaqueteMasPesado() {
+
+        Paquete masPesado = null;
+
+        if (paquete1 != null) {
+            masPesado = paquete1;
+        }
+
+        if (paquete2 != null &&
+                (masPesado == null ||
+                        paquete2.getPeso() > masPesado.getPeso())) {
+            masPesado = paquete2;
+        }
+
+        if (paquete3 != null &&
+                (masPesado == null ||
+                        paquete3.getPeso() > masPesado.getPeso())) {
+            masPesado = paquete3;
+        }
+
+        return masPesado;
+    }
+
+    public Paquete getPaqueteMasPesado() {
+
+        Paquete masPesado = null;
+
+        if (paquete1 != null) {
+            masPesado = paquete1;
+        }
+
+        if (paquete2 != null &&
+                (masPesado == null &&
+                        paquete2.getPeso() > masPesado.getPeso())) {
+            masPesado = paquete2;
+        }
+
+        if (paquete3 != null &&
+                (masPesado == null &&
+                        paquete3.getPeso() > masPesado.getPeso())) {
+            masPesado = paquete3;
+        }
+
+        return masPesado;
     }
 }
