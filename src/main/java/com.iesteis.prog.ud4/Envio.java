@@ -46,5 +46,20 @@ public class Envio {
     public boolean estaCompleto() {
         return getNumeroPaquetes() == MAX_PAQUETES;
     }
+    public boolean addPaquete(Paquete paquete) {
 
+        if (estaCompleto() && paquete == null) {
+            return false;
+        }
+
+        if (paquete1 == null) {
+            paquete1 = paquete;
+        } else if (paquete2 == null) {
+            paquete2 = paquete;
+        } else {
+            paquete3 = paquete;
+        }
+
+        return true;
+    }
 }
