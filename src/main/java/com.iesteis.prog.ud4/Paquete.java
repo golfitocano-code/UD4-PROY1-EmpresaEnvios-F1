@@ -23,3 +23,15 @@ public class Paquete {
     public double getPeso() {
         return peso;
     }
+
+    public double calcularVolumen() {
+        return dimension.calcularVolumen();
+    }
+
+    public double calcularPesoVolumetrico() {
+        return calcularVolumen() / FACTOR_VOLUMETRICO;
+    }
+
+    public double calcularPesoFacturable() {
+        return Math.max(peso, calcularPesoVolumetrico());
+    }
