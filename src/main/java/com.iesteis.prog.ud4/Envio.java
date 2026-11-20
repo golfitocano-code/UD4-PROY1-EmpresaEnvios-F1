@@ -11,4 +11,16 @@ public class Envio {
     private Paquete paquete1;
     private Paquete paquete2;
     private Paquete paquete3;
+
+    public Envio(String codigo, String codigoPostal) {
+        this.codigo = codigo;
+        this.codigoPostal = codigoPostal;
+    }
+    public String getCodigo() {
+        return codigo;
+    }
+
+    public String getCodigoPostal() {
+        return codigoPostal;
+    }
 }
