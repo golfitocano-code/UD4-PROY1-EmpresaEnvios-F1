@@ -69,4 +69,21 @@ public class Envio {
 
         return creaPaquete(paquete);
     }
+    public double calcularPesoReal() {
+        double total;
+
+        if (paquete1 != null) {
+            total += paquete1.getPeso();
+        }
+
+        if (paquete2 != null) {
+            total += paquete2.getPeso();
+        }
+
+        if (paquete3 != null) {
+            total += paquete3.getPeso();
+        }
+
+        return total;
+    }
 }
