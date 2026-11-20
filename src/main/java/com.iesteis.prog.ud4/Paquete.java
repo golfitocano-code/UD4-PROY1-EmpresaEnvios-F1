@@ -39,4 +39,9 @@ public class Paquete {
             return calcularPesoVolumetrico();
         }
     }
+
+    public String toString() {
+        return dimension + " | " + peso + " kg (facturable "
+                + calcularPesoFacturable() + " kg)";
+    }
     }
