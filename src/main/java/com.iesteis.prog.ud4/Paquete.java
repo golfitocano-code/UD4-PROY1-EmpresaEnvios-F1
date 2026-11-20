@@ -15,3 +15,11 @@ public class Paquete {
     public Paquete(double alto, double ancho, double largo, double peso) {
         this(new Dimension(alto, ancho, largo), peso);
     }
+
+    public Dimension getDimension() {
+        return dimension;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
