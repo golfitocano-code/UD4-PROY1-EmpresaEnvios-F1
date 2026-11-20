@@ -40,4 +40,11 @@ public class Envio {
 
         return contador;
     }
+    public boolean estaCompleto() {
+        return getNumeroPaquetes() == MAX_PAQUETES;
+    }
+    public boolean estaCompleto() {
+        return getNumeroPaquetes() == MAX_PAQUETES;
+    }
+
 }
