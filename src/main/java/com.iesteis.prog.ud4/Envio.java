@@ -62,4 +62,11 @@ public class Envio {
 
         return true;
     }
+    public boolean creaPaquete(double alto, double ancho,
+                              double largo, double peso) {
+
+        Paquete paquete = new Paquete(alto, ancho, largo, peso);
+
+        return creaPaquete(paquete);
+    }
 }
