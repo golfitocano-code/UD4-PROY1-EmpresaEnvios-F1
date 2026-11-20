@@ -157,4 +157,29 @@ public class Envio {
 
         return masPesado;
     }
+
+    public String toString() {
+
+        String resultado = "Envío " + codigo + " -> CP "
+                + codigoPostal + " (" + getNumeroPaquetes()
+                + " paquete/s)\n";
+
+        if (paquete1 != null) {
+            resultado += "  1. " + paquete1 + "\n";
+        }
+
+        if (paquete2 != null) {
+            resultado += "  2. " + paquete2 + "\n";
+        }
+
+        if (paquete3 != null) {
+            resultado += "  3. " + paquete3 + "\n";
+        }
+
+        resultado += "  Peso real: " + calcularPesoReal()
+                + " kg | Peso facturable: "
+                + calcularPesoFacturable() + " kg";
+
+        return resultado;
+    }
 }
